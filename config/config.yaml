@@ -1,0 +1,51 @@
+columns:
+  - Patient_ID: categorical
+  - Age: int
+  - Gender: categorical
+  - Nationality: categorical
+  - Emirate: categorical
+  - Diagnosis_Date: categorical
+  - Cancer_Type: categorical
+  - Cancer_Stage: categorical
+  - Treatment_Type: categorical
+  - Treatment_Start_Date: categorical
+  - Hospital: categorical
+  - Primary_Physician: categorical
+  - Outcome: categorical
+  - Death_Date: categorical
+  - Cause_of_Death: categorical
+  - Smoking_Status: categorical
+  - Comorbidities: categorical
+  - Ethnicity: categorical
+  - Weight: int
+  - Height: int
+
+
+categorical_columns:
+  - Gender
+  - Nationality
+  - Emirate
+  - Cancer_Type
+  - Cancer_Stage
+  - Treatment_Type
+  - Hospital
+  - Smoking_Status
+  - Ethnicity
+
+numerical_columns:
+  - Age
+  - Weight
+  - Height
+
+cat_col:
+  - Cancer_Stage
+
+drop_columns:
+  - Patient_ID
+  - Primary_Physician
+  - Comorbidities
+  - Treatment_Start_Date
+  - Death_Date
+  - Cause_of_Death
+  - Diagnosis_Date
+

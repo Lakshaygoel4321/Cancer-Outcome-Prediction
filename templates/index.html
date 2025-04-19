@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Recovery Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 30px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+        }
+        input, select {
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cancer Outcome Prediction</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="number" id="Age" name="Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Gender">Gender</label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Nationality">Nationality</label>
+                <select name="Nationality" id="Nationality">
+                    <option value="Emirati">Emirati</option>
+                    <option value="Expatriate">Expatriate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Emirate">Emirate</label>
+                <select name="Emirate" id="Emirate">
+                    <option value="Umm Al Quwain">Umm Al Quwain</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Fujairah">Fujairah</option>
+                    <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                    <option value="Sharjah">Sharjah</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Ajman">Ajman</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Cancer_Type">Cancer Type</label>
+                <select name="Cancer_Type" id="Cancer_Type">
+                    <option value="Liver">Liver</option>
+                    <option value="Leukemia">Leukemia</option>
+                    <option value="Lung">Lung</option>
+                    <option value="Pancreatic">Pancreatic</option>
+                    <option value="Breast">Breast</option>
+                    <option value="Ovarian">Ovarian</option>
+                    <option value="Prostate">Prostate</option>
+                    <option value="Colorectal">Colorectal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Cancer_Stage">Cancer Stage</label>
+                <select name="Cancer_Stage" id="Cancer_Stage">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Treatment_Type">Treatment Type</label>
+                <select name="Treatment_Type" id="Treatment_Type">
+                    <option value="Radiation">Radiation</option>
+                    <option value="Surgery">Surgery</option>
+                    <option value="Chemotherapy">Chemotherapy</option>
+                    <option value="Immunotherapy">Immunotherapy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Hospital">Hospital</label>
+                <select name="Hospital" id="Hospital">
+                    <option value="Sheikh Khalifa Hospital">Sheikh Khalifa Hospital</option>
+                    <option value="Dubai Hospital">Dubai Hospital</option>
+                    <option value="Zayed Military Hospital">Zayed Military Hospital</option>
+                    <option value="Cleveland Clinic Abu Dhabi">Cleveland Clinic Abu Dhabi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Smoking_Status">Smoking Status</label>
+                <select name="Smoking_Status" id="Smoking_Status">
+                    <option value="Non-Smoker">Non-Smoker</option>
+                    <option value="Smoker">Smoker</option>
+                    <option value="Former Smoker">Former Smoker</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Ethnicity">Ethnicity</label>
+                <select name="Ethnicity" id="Ethnicity">
+                    <option value="European">European</option>
+                    <option value="South Asian">South Asian</option>
+                    <option value="African">African</option>
+                    <option value="East Asian">East Asian</option>
+                    <option value="Arab">Arab</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Height">Height (cm)</label>
+                <input type="number" id="Height" name="Height" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Weight">Weight (kg)</label>
+                <input type="number" id="Weight" name="Weight" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">Prediction: {{ prediction }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
