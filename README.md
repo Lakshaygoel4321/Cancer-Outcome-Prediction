@@ -1,7 +1,3 @@
-Great! Based on your setup and the reference README structure you shared, here’s a custom `README.md` for your **Cancer Outcome Prediction** MLOps project:
-
----
-
 # **Cancer Outcome Prediction** 🧬⚕️  
 
 This repository presents a complete **MLOps pipeline** designed to predict cancer treatment outcomes using patient data. The project includes data ingestion, transformation, model training, and a full-stack deployment using **Flask (backend)** and **React (frontend)** — all deployed without CI/CD or MongoDB integration.
