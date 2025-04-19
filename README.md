@@ -150,12 +150,3 @@ Feel free to fork this repo, submit pull requests, or open issues to collaborate
 
 ## 📄 **License**  
 This project is licensed under the **MIT License**.
-
----
-
-Would you like me to:
-- Add example screenshots to this README?
-- Add badges (e.g., Python version, license)?
-- Format this into an actual `README.md` file?
-
-Let me know how you'd like to polish it!
